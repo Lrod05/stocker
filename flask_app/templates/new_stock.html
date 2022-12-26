@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>New Stock</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav_bar">
+            <h1>Stocker</h1>
+            <div class="buttons">
+                <a class="button1" href="/dashboard">Dashboard</a><br>
+                <a class="button1" href="/logout">Logout</a>
+            </div>
+        </div>
+        <div class="body">
+            <h2>Add a stock to the watch list!</h2>
+        </div>
+        <form action="/create_stock" method="post" class="stocks">
+            {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+                {% if messages %}                            <!-- check if there are any messages -->
+                    {% for message in messages %}            <!-- loop through the messages -->
+                        <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <h2>Stock form</h2><br>
+            <div>
+                <label for="symbol">Symbol:</label>
+                <input type="text" name="symbol">
+            </div>
+            <div>
+                <label for="company_name">Company Name:</label>
+                <input type="text" name="company_name">
+            </div>
+                <label for="description">Company Description:</label>
+                <textarea name="description" id="" cols="30" rows="10"></textarea><br>
+            <button class="button">Add Stock</button>
+        </form>
+    </div>
+</body>
+</html>

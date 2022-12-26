@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav_bar">
+            <h1>Stocker</h1>
+            <div class="buttons">
+                <a class="button1" href="add_stock">Add stock</a><br>
+                <a class="button1" href="/logout">Logout</a>
+            </div>
+        </div>
+        <div class="body">
+        <h2>Welcome back to Stocker {{user.first_name}} {{user.last_name}}</h2>
+        </div>
+        {% for stock in all %}
+        <div class="stocks">
+            <h3>{{stock.symbol}} - {{stock.company_name}}</h3>
+            <h4>
+                <a class="button" href="/show_stock/{{stock.id}}">View</a>
+                <a class="button" href="/edit_stock/{{stock.id}}">Update</a>
+                <a class="button" href="/delete/{{stock.id}}">Delete</a>
+            </h4>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

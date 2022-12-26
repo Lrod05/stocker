@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Update Stock</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav_bar">
+            <h1>Stocker</h1>
+            <div class="buttons">
+                <a class="button1" href="/dashboard">Dashboard</a><br>
+                <a class="button1" href="/logout">Logout</a>
+            </div>
+        </div>
+        <form action="/update_stock/{{stock.id}}" method="post" class="stocks">
+            <h1>Edit this Stock</h1><br>
+            <div>
+                <label for="symbol">Symbol:</label>
+                <input type="text" name="symbol" value="{{stock.symbol}}">
+            </div>
+            <div>
+                <label for="company_name">Company Name:</label>
+                <textarea name="company_name" id="" cols="30" rows="10">{{stock.company_name}}</textarea>
+            </div>
+                <label for="description">Description:</label>
+                <textarea name="description" id="" cols="30" rows="10">{{stock.description}}</textarea><br>
+                <button class="button">Update</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

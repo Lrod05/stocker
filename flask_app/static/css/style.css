@@ -1,0 +1,76 @@
+* {
+    margin: auto;
+}
+
+.container {
+    background-color:brown;
+}
+
+
+.nav_bar {
+    background-color: gray;
+    color: black;
+    padding-left: 10px;
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.buttons {
+    display: flex;
+    align-content: space-between;
+    width: 150px;
+}
+
+/* #img {
+    width: 1200px;
+    height: 628px;
+} */
+
+.body {
+    background-color: aquamarine;
+    text-align: center;
+    height: 50px;
+    padding-top: 30px;
+}
+
+.registration {
+    display: flex;
+    padding: 40px;
+    background-color: aliceblue;
+}
+
+
+.stocks {
+    background-color: aliceblue;
+    text-align: center;
+    padding: 30px;
+}
+
+.button {
+    display: block;
+    height: 20px;
+    width: 150px;
+    border-radius: 2px black;
+    background-color: navy;
+    color: white;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+    align-content: center;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.button1 {
+    display: block;
+    height: 20px;
+    width: 150px;
+    border-radius: 2px black;
+    background-color: navy;
+    color: white;
+    border: 2px solid black;
+    box-shadow: 3px 3px black;
+    align-content: center;
+    margin-top: 5px;
+    text-decoration: none;
+    margin-left: 5px;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Stock Displayed</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav_bar">
+            <h1>Stocker</h1>
+            <div class="buttons">
+                <a class="button1" href="/dashboard">Dashboard</a><br>
+                <a class="button1" href="/logout">Logout</a>
+            </div>
+        </div>
+        <div class="stocks">
+            <h2>Stock info:</h2>
+            <h3>Stock symbol: {{stock.symbol}}</h3>
+            <h3>Stock name: {{stock.company_name}}</h3>
+            <h3>Stock description: {{stock.description}}</h3>
+            <h3>Uploaded by: {{stock.joined.first_name}} {{stock.joined.last_name}}</h3>
+        </div>
+    </div>
+</body>
+</html>
